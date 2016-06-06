@@ -67,7 +67,7 @@ function bundle(b) {
     })
     .pipe(source('bundle.js'))
     .pipe(buffer())
-    .pipe(uglify()).on('error', gutil.log)
+    // .pipe(uglify()).on('error', gutil.log)
     .pipe(sourcemaps.init({ loadMaps: true }))
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('public'));

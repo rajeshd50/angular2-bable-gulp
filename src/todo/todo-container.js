@@ -12,7 +12,7 @@ import {MD_ICON_DIRECTIVES} from '@angular2-material/icon';
     template: `
   	<div layout="column" style="height:100%;">
 	    <md-content layout-padding>
-        	<p>My Content here</p>
+        	<p>My Content here, add some todo</p>
         </md-content>
 	</div>`,
 	directives: [MATERIAL_DIRECTIVES,MD_ICON_DIRECTIVES]

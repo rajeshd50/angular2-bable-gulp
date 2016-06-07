@@ -1,14 +1,22 @@
 import {TodoItem} from './todo-item';
 
+let instance = null;
+
 export class TodoService {
+	todos = {
+		data:[]
+	};
 	constructor() {
+		if(!instance){
+            instance = this;
+        }
 		this.storageName = 'ang-todo-app';
-		this.todos = new Array();
+
+		return instance;
 	}
 
 	addTodo(todo: TodoItem) {
-		this.todos.push(todo);
-		console.log(this.todos);
+		this.todos.data.push(todo.getTodo());
 	}
 
 	getAllTodo() {
